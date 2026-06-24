@@ -1,0 +1,48 @@
+{
+  "name": "poem-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "mcpName": "io.github.openpoem/poem-mcp",
+  "description": "POEM (Pseudo-code Oriented Executable Markup) MCP server. Read, validate, and translate .poem specs to any language.",
+  "type": "module",
+  "main": "dist/mcp.js",
+  "module": "src/mcp.ts",
+  "bin": {
+    "poem-mcp": "dist/mcp.js"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/mcp.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "poem",
+    "pseudo-code",
+    "spec",
+    "llm",
+    "ai",
+    "code-generation",
+    "language-agnostic",
+    "model-context-protocol"
+  ],
+  "author": "OpenPoem <info@openpoem.org>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openpoem/poem-mcp.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
